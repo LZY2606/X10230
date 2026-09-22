@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GSB.Core/GSB.Core.csproj" />
+    <Project Path="src/GSB.Storage/GSB.Storage.csproj" />
+    <Project Path="src/GSB.Web/GSB.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GSB.Core.Tests/GSB.Core.Tests.csproj" />
+    <Project Path="tests/GSB.Storage.Tests/GSB.Storage.Tests.csproj" />
+    <Project Path="tests/GSB.Web.Tests/GSB.Web.Tests.csproj" />
+  </Folder>
+</Solution>
