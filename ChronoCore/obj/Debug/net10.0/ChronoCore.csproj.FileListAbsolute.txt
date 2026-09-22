@@ -1,0 +1,13 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/bin/Debug/net10.0/ChronoCore.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/bin/Debug/net10.0/ChronoCore.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/bin/Debug/net10.0/ChronoCore.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/refint/ChronoCore.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ChronoCore.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/obj/Debug/net10.0/ref/ChronoCore.dll

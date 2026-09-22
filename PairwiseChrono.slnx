@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ChronoCore/ChronoCore.csproj" />
+  <Project Path="ChronoTests/ChronoTests.csproj" />
+  <Project Path="ChronoWeb/ChronoWeb.csproj" />
+</Solution>
