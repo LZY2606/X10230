@@ -1,0 +1,13 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/bin/Debug/net10.0/CoreChrono.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/bin/Debug/net10.0/CoreChrono.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/bin/Debug/net10.0/CoreChrono.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/refint/CoreChrono.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/CoreChrono.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/CoreChrono/obj/Debug/net10.0/ref/CoreChrono.dll
