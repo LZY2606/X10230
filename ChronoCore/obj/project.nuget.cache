@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "RShgb25mNM4=",
+  "success": true,
+  "projectFilePath": "/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/ChronoCore.csproj",
+  "expectedPackageFiles": [
+    "/Users/mac/.nuget/packages/microsoft.data.sqlite/8.0.22/microsoft.data.sqlite.8.0.22.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.data.sqlite.core/8.0.22/microsoft.data.sqlite.core.8.0.22.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/3.0.0/sqlitepclraw.bundle_e_sqlite3.3.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.config.e_sqlite3/3.0.0/sqlitepclraw.config.e_sqlite3.3.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.core/3.0.0/sqlitepclraw.core.3.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.lib.e_sqlite3/3.50.3/sqlitepclraw.lib.e_sqlite3.3.50.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.provider.e_sqlite3/3.0.0/sqlitepclraw.provider.e_sqlite3.3.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "ChronoCore 依赖于 SQLitePCLRaw.bundle_e_sqlite3 (>= 2.1.16)，但没有找到 SQLitePCLRaw.bundle_e_sqlite3 2.1.16。已改为解析 SQLitePCLRaw.bundle_e_sqlite3 3.0.0。",
+      "projectPath": "/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/ChronoCore.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/ChronoCore/ChronoCore.csproj",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
