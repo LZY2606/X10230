@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>ChronoDepth.Web</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core/Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\cases\**\*" LinkBase="cases" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
