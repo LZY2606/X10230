@@ -1,0 +1,8 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/bin/Debug/net10.0/.msCoverageSourceRootsMapping_GeoChron.Tests
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/bin/Debug/net10.0/CoverletSourceRootsMapping_GeoChron.Tests
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/obj/Debug/net10.0/GeoChron.Tests.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/obj/Debug/net10.0/GeoChron.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/obj/Debug/net10.0/GeoChron.Tests.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/obj/Debug/net10.0/GeoChron.Tests.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/obj/Debug/net10.0/GeoChron.Tests.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/tests/GeoChron.Tests/obj/Debug/net10.0/GeoChron.Tests.sourcelink.json

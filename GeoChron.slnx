@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GeoChron.Core/GeoChron.Core.csproj" />
+    <Project Path="src/GeoChron.Web/GeoChron.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GeoChron.Tests/GeoChron.Tests.csproj" />
+  </Folder>
+</Solution>

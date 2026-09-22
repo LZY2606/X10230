@@ -1,0 +1,13 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/bin/Debug/net10.0/GeoChron.Core.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/bin/Debug/net10.0/GeoChron.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/bin/Debug/net10.0/GeoChron.Core.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/refint/GeoChron.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/GeoChron.Core.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/GeoChron.Core/obj/Debug/net10.0/ref/GeoChron.Core.dll
