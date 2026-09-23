@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DepthAge.Domain/DepthAge.Domain.csproj" />
+    <Project Path="src/DepthAge.Storage/DepthAge.Storage.csproj" />
+    <Project Path="src/DepthAge.Web/DepthAge.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DepthAge.Tests/DepthAge.Tests.csproj" />
+  </Folder>
+</Solution>

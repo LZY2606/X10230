@@ -1,0 +1,12 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/bin/Debug/net10.0/DepthAge.Domain.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/bin/Debug/net10.0/DepthAge.Domain.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/bin/Debug/net10.0/DepthAge.Domain.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/refint/DepthAge.Domain.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/DepthAge.Domain.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Domain/obj/Debug/net10.0/ref/DepthAge.Domain.dll

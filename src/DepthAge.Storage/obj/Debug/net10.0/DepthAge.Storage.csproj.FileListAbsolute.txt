@@ -1,0 +1,16 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/bin/Debug/net10.0/DepthAge.Storage.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/bin/Debug/net10.0/DepthAge.Storage.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/bin/Debug/net10.0/DepthAge.Storage.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/bin/Debug/net10.0/DepthAge.Domain.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/bin/Debug/net10.0/DepthAge.Domain.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.D99A25E1.Up2Date
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/refint/DepthAge.Storage.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/DepthAge.Storage.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/DepthAge.Storage/obj/Debug/net10.0/ref/DepthAge.Storage.dll
