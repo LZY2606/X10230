@@ -1,0 +1,8 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.MvcApplicationPartsAssemblyInfo.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/A/work/src/AgeDepth.Web/obj/Debug/net10.0/AgeDepth.Web.sourcelink.json
