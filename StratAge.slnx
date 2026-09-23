@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StratAge.Core/StratAge.Core.csproj" />
+    <Project Path="src/StratAge.Web/StratAge.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/StratAge.Tests/StratAge.Tests.csproj" />
+  </Folder>
+</Solution>
