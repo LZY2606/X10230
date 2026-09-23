@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/Chronostrat.Core/Chronostrat.Core.csproj" />
+  <Project Path="src/Chronostrat.Web/Chronostrat.Web.csproj" />
+  <Project Path="tests/Chronostrat.Tests/Chronostrat.Tests.csproj" />
+</Solution>

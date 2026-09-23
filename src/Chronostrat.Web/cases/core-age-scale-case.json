@@ -1,0 +1,117 @@
+{
+  "id": "core-age-scale-case",
+  "title": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "narrative": "沉积学小组把岩芯分段、年龄锚点和事件层组成深度年龄模型，保留多套可辩护候选。基线完整保留深度基准、分段缺口、放射性年龄分布、储层偏移、事件层相关与全部排除决定；随后一次参数修订、一次只影响 seg-2 的源数据改动、一次互相冲突的人工决定；重放经过深度重复、不整合、倒置层段、并列锚点、年龄分布长尾、局部重算与并发冻结。",
+  "coordinateBasis": { "datum": "mbsf", "orientation": "down-positive", "ageUnit": "ka" },
+  "steps": [
+    { "op": "import", "name": "datum", "material": {
+      "kind": "depth-datum", "id": "datum-mbsf", "name": "meters below seafloor",
+      "referenceLevel": "seafloor", "unit": "m", "orientation": "down-positive" } },
+
+    { "op": "import", "name": "seg-1", "material": {
+      "kind": "segment", "id": "seg-1", "topDepth": 0.0, "baseDepth": 9.5, "unit": "m", "datumId": "datum-mbsf" } },
+    { "op": "import", "name": "bnd-gap", "material": {
+      "kind": "boundary", "id": "bnd-gap-1", "boundaryKind": "gap", "atDepth": 9.5, "unit": "m", "datumId": "datum-mbsf",
+      "note": "core recovery gap 9.5-11.0 m; explicit boundary, no monotonic constraint across" } },
+    { "op": "import", "name": "seg-2", "material": {
+      "kind": "segment", "id": "seg-2", "topDepth": 11.0, "baseDepth": 22.0, "unit": "m", "datumId": "datum-mbsf" } },
+    { "op": "import", "name": "bnd-unc", "material": {
+      "kind": "boundary", "id": "bnd-unc-1", "boundaryKind": "unconformity", "atDepth": 22.0, "unit": "m", "datumId": "datum-mbsf",
+      "note": "hiatal unconformity; explicit boundary" } },
+    { "op": "import", "name": "seg-3", "material": {
+      "kind": "segment", "id": "seg-3", "topDepth": 24.0, "baseDepth": 35.0, "unit": "m", "datumId": "datum-mbsf" } },
+
+    { "op": "import", "name": "ro-1", "material": {
+      "kind": "reservoir-offset", "id": "ro-1",
+      "offset": { "kind": "normal", "unit": "ka", "mean": 0.8, "sd": 0.1 } } },
+
+    { "op": "import", "name": "anch-1", "material": {
+      "kind": "age-anchor", "id": "anch-1", "depth": 0.5, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 2.0, "sd": 0.3 },
+      "source": "lab:AMS-101" } },
+    { "op": "import", "name": "anch-2", "material": {
+      "kind": "age-anchor", "id": "anch-2", "depth": 5.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "empirical", "unit": "ka",
+        "samples": [5.4,5.5,5.5,5.6,5.6,5.7,5.7,5.8,5.8,5.9,5.9,6.0,6.0,6.0,6.1,6.1,6.2,6.2,6.3,6.3,6.4,6.4,6.5,6.5,6.6,6.7,6.8,6.9,7.0,7.2,7.5,7.9,8.4,9.1,9.8,10.6,11.5,12.4,13.2,14.0] },
+      "source": "lab:OSL-207 (long-tail posterior kept, not averaged)" } },
+    { "op": "import", "name": "anch-3", "material": {
+      "kind": "age-anchor", "id": "anch-3", "depth": 9.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 10.5, "sd": 0.4 },
+      "reservoirOffsetId": "ro-1", "source": "lab:AMS-114 (14C, reservoir-corrected)" } },
+    { "op": "import", "name": "anch-x", "material": {
+      "kind": "age-anchor", "id": "anch-x", "depth": 3.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 4.0, "sd": 0.3 },
+      "source": "lab:AMS-099 (superseded pick)" } },
+
+    { "op": "import", "name": "anch-4", "material": {
+      "kind": "age-anchor", "id": "anch-4", "depth": 11.5, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 12.0, "sd": 0.5 },
+      "source": "lab:AMS-120" } },
+    { "op": "import", "name": "anch-5a", "material": {
+      "kind": "age-anchor", "id": "anch-5a", "depth": 15.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 16.0, "sd": 0.6 },
+      "source": "lab:AMS-131 (tied pick A)" } },
+    { "op": "import", "name": "anch-5b", "material": {
+      "kind": "age-anchor", "id": "anch-5b", "depth": 15.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 17.5, "sd": 0.6 },
+      "source": "lab:OSL-131 (tied pick B, competing)" } },
+    { "op": "import", "name": "anch-6", "material": {
+      "kind": "age-anchor", "id": "anch-6", "depth": 21.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 20.0, "sd": 0.8 },
+      "source": "lab:AMS-140" } },
+
+    { "op": "import", "name": "anch-7", "material": {
+      "kind": "age-anchor", "id": "anch-7", "depth": 25.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 30.0, "sd": 0.5 },
+      "source": "lab:AMS-150" } },
+    { "op": "import", "name": "anch-8", "material": {
+      "kind": "age-anchor", "id": "anch-8", "depth": 30.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 28.0, "sd": 0.5 },
+      "source": "lab:AMS-151 (inverted: younger below anch-7)" } },
+    { "op": "import", "name": "anch-9", "material": {
+      "kind": "age-anchor", "id": "anch-9", "depth": 34.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 33.0, "sd": 0.7 },
+      "source": "lab:AMS-152" } },
+
+    { "op": "import", "name": "el-1", "material": {
+      "kind": "event-layer", "id": "el-1", "name": "tephra-A", "depth": 5.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "correlatedAge": { "kind": "normal", "unit": "ka", "mean": 6.1, "sd": 0.2 },
+      "confidence": "certain" } },
+    { "op": "import", "name": "el-2", "material": {
+      "kind": "event-layer", "id": "el-2", "name": "tephra-B", "depth": 15.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "correlatedAge": { "kind": "normal", "unit": "ka", "mean": 16.8, "sd": 0.4 },
+      "confidence": "tentative" } },
+
+    { "op": "import", "name": "ex-1", "material": {
+      "kind": "exclusion-decision", "id": "ex-1", "targetId": "anch-x",
+      "reason": "duplicate depth pick superseded by anch-1 re-measurement",
+      "decidedBy": "sed-team-lead", "decidedAt": "2026-09-10T09:00:00+09:00" } },
+
+    { "op": "derive", "name": "derive-baseline" },
+
+    { "op": "revise-parameters", "name": "pars-v2",
+      "version": 2, "mcBudget": 6000, "minValidDraws": 300, "equivalenceTolerance": 0.05, "seed": 42,
+      "note": "参数修订：提高 MC 预算以稳定长尾分位数" },
+    { "op": "derive", "name": "derive-v2" },
+
+    { "op": "import", "name": "anch-10", "material": {
+      "kind": "age-anchor", "id": "anch-10", "depth": 13.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 14.0, "sd": 0.4 },
+      "source": "lab:AMS-160 (local source change, seg-2 only)" } },
+    { "op": "local-recompute", "name": "recompute-seg2", "trigger": "anch-10", "affectedSegments": ["seg-2"] },
+
+    { "op": "accept", "name": "dec-accept", "candidate": "retained:0",
+      "rationale": "与 tephra-B 相关一致，速率区间物理可辩护", "by": "sed-team-lead" },
+    { "op": "reject", "name": "dec-reject", "candidate": "retained:0",
+      "rationale": "同一候选：复核人认为并列锚点 5b 的 OSL 系统差未充分论证（冲突决定，双方保留）", "by": "reviewer-2" },
+
+    { "op": "freeze", "name": "freeze-1", "by": "sed-team-lead" },
+    { "op": "freeze", "name": "freeze-2-stale", "by": "reviewer-2", "stale": true },
+
+    { "op": "import", "name": "anch-11", "material": {
+      "kind": "age-anchor", "id": "anch-11", "depth": 27.0, "depthUnit": "m", "datumId": "datum-mbsf",
+      "age": { "kind": "normal", "unit": "ka", "mean": 31.0, "sd": 0.4 },
+      "source": "lab:AMS-170 (post-freeze new anchor, compare impact)" } },
+    { "op": "derive", "name": "derive-post-freeze" }
+  ]
+}
