@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "core-chronology/v1",
+  "caseId": "case-core-u01",
+  "title": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "narrative": "沉积学小组把 U01 岩芯分段、放射性年龄锚点、储层偏移和事件相关组合成深度年龄模型；初始导入保留全部直接材料，随后重放局部修订、冲突决定与边界组合。",
+  "materials": {
+    "depthDatums": [
+      { "id": "datum-ccsf-a", "coreId": "U01", "direction": "depth-below-seafloor-positive-downward", "unit": "m CCSF-A", "reference": "CCSF-A composite depth, core U01, splice table r4", "originRaw": "seafloor = 0.00 m CCSF-A", "notes": "派生层规范化为 m CCSF-A；原始表示随材料保留。" }
+    ],
+    "segments": [
+      { "id": "seg-A", "label": "U01-A continuous mud", "startDepth": { "value": 0.2, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "20 cm CCSF-A", "diagnostics": [] }, "endDepth": { "value": 4.8, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "4.80 m CCSF-A", "diagnostics": [] }, "continuous": true, "eventLayerIds": ["evt-ash-a"] },
+      { "id": "seg-B", "label": "U01-B marine mud with reservoir correction", "startDepth": { "value": 5.6, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "5.60 m CCSF-A", "diagnostics": [] }, "endDepth": { "value": 11.9, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "11.90 m CCSF-A", "diagnostics": [] }, "continuous": true, "eventLayerIds": ["evt-ash-b"] },
+      { "id": "seg-C", "label": "U01-C laminated interval", "startDepth": { "value": 12.7, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "12.70 m CCSF-A", "diagnostics": [] }, "endDepth": { "value": 20.4, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "20.40 m CCSF-A", "diagnostics": [] }, "continuous": true, "eventLayerIds": [] }
+    ],
+    "gaps": [
+      { "id": "gap-A-B", "segmentIdAbove": "seg-A", "segmentIdBelow": "seg-B", "gap": { "value": 0.8, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "0.80 m missing interval", "diagnostics": [] }, "boundaryKind": "unconformity", "rationale": "取芯缺口叠加重塑碎屑；跨边界不做单调年龄约束。" },
+      { "id": "gap-B-C", "segmentIdAbove": "seg-B", "segmentIdBelow": "seg-C", "gap": { "value": 0.8, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "40 cm core gap + 40 cm no-recovery", "diagnostics": [] }, "boundaryKind": "hiatus", "rationale": "沉积间断允许年龄阶跃；边界显式保留。" }
+    ],
+    "anchors": [
+      { "id": "anc-A01", "materialType": "planktonic foraminifera", "depth": { "value": 0.9, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "90 cm CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [7.9,8.1,8.0,8.2,8.4,8.0,8.3,8.1,9.6,8.2], "quantiles": { "q0.05": 7.92, "q0.5": 8.1, "q0.95": 9.08, "q0.99": 9.5 }, "longTail": true }, "reservoirModelId": null, "reservoirCorrectedSamplesUnit": null, "reservoirCorrectedSamples": null, "excluded": false, "exclusionReason": null, "diagnostics": [] },
+      { "id": "anc-A02", "materialType": "terrestrial plant fragment", "depth": { "value": 4.3, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "4.30 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [17.1,17.4,17.2,17.0,17.3,17.5,17.2,17.1,17.4,17.3], "quantiles": { "q0.05": 17.04, "q0.5": 17.25, "q0.95": 17.46, "q0.99": 17.49 }, "longTail": false }, "reservoirModelId": null, "reservoirCorrectedSamplesUnit": null, "reservoirCorrectedSamples": null, "excluded": false, "exclusionReason": null, "diagnostics": [] },
+      { "id": "anc-A03-tie", "materialType": "charcoal", "depth": { "value": 4.3, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "4.30 m CCSF-A (parallel tie sample)", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [17.0,17.3,17.2,17.1,17.4,17.2,17.0,17.3,17.1,17.2], "quantiles": { "q0.05": 17.0, "q0.5": 17.2, "q0.95": 17.4, "q0.99": 17.4 }, "longTail": false }, "reservoirModelId": null, "reservoirCorrectedSamplesUnit": null, "reservoirCorrectedSamples": null, "excluded": false, "exclusionReason": null, "diagnostics": [] },
+      { "id": "anc-B01", "materialType": "mixed benthic foraminifera", "depth": { "value": 6.2, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "6.20 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "14C yr BP", "timeDatum": "BP1950", "samples": [9350,9440,9390,9410,9500,9380,9420,9395,9470,9400], "quantiles": { "q0.05": 9352, "q0.5": 9405, "q0.95": 9488, "q0.99": 9498 }, "longTail": false }, "reservoirModelId": "res-marine-v1", "reservoirCorrectedSamplesUnit": "cal ka BP", "reservoirCorrectedSamples": [9.92,10.01,9.96,9.98,10.07,9.95,9.99,9.965,10.04,9.97], "excluded": false, "exclusionReason": null, "diagnostics": [] },
+      { "id": "anc-B02", "materialType": "bivalve shell", "depth": { "value": 8.7, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "8.70 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "14C yr BP", "timeDatum": "BP1950", "samples": [11220,11280,11240,11310,11260,11250,11290,11230,11320,11270], "quantiles": { "q0.05": 11222, "q0.5": 11265, "q0.95": 11316, "q0.99": 11320 }, "longTail": false }, "reservoirModelId": "res-marine-v1", "reservoirCorrectedSamplesUnit": "cal ka BP", "reservoirCorrectedSamples": [11.79,11.85,11.81,11.88,11.83,11.82,11.86,11.8,11.89,11.84], "excluded": false, "exclusionReason": null, "diagnostics": [] },
+      { "id": "anc-B03", "materialType": "planktonic foraminifera", "depth": { "value": 11.2, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "11.20 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [13.1,13.0,13.2,13.1,13.05,13.15,13.0,13.2,13.1,13.05], "quantiles": { "q0.05": 13.0, "q0.5": 13.1, "q0.95": 13.2, "q0.99": 13.2 }, "longTail": false }, "reservoirModelId": "res-marine-v1", "reservoirCorrectedSamplesUnit": "cal ka BP", "reservoirCorrectedSamples": [13.1,13.0,13.2,13.1,13.05,13.15,13.0,13.2,13.1,13.05], "excluded": false, "exclusionReason": null, "diagnostics": [{ "code": "semantic.unresolvable", "severity": "error", "location": "anchors/anc-B03/age", "message": "校正后中位年龄老于更深锚点 anc-B02，在连续段 seg-B 内倒置。", "rawRepresentation": "13.1 cal ka BP at 11.20 m" }] },
+      { "id": "anc-C01", "materialType": "charcoal", "depth": { "value": 13.4, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "13.40 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [16.2,16.4,16.3,16.5,16.25,16.35,16.4,16.3,16.5,16.3], "quantiles": { "q0.05": 16.2, "q0.5": 16.32, "q0.95": 16.5, "q0.99": 16.5 }, "longTail": false }, "reservoirModelId": null, "reservoirCorrectedSamplesUnit": null, "reservoirCorrectedSamples": null, "excluded": false, "exclusionReason": null, "diagnostics": [] },
+      { "id": "anc-C02", "materialType": "reworked wood", "depth": { "value": 17.8, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "17.80 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [43.0,43.4,43.1,43.2,43.3,43.0,43.5,43.2,43.1,43.3], "quantiles": { "q0.05": 43.0, "q0.5": 43.2, "q0.95": 43.5, "q0.99": 43.5 }, "longTail": false }, "reservoirModelId": null, "reservoirCorrectedSamplesUnit": null, "reservoirCorrectedSamples": null, "excluded": true, "exclusionReason": "碎屑再搬运；材料保留但不参与模型。", "diagnostics": [] },
+      { "id": "anc-C03", "materialType": "plant macrofossil", "depth": { "value": 19.6, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "19.60 m CCSF-A", "diagnostics": [] }, "age": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [20.1,20.4,20.2,20.3,20.5,20.25,20.15,20.35,20.4,20.3], "quantiles": { "q0.05": 20.1, "q0.5": 20.3, "q0.95": 20.5, "q0.99": 20.5 }, "longTail": false }, "reservoirModelId": null, "reservoirCorrectedSamplesUnit": null, "reservoirCorrectedSamples": null, "excluded": false, "exclusionReason": null, "diagnostics": [] }
+    ],
+    "reservoirs": [
+      { "id": "res-marine-v1", "label": "Local marine reservoir R v1", "offset": { "value": 430.0, "unit": "14C yr", "datum": "BP1950", "rawRepresentation": "ΔR=0; R=430 yr", "diagnostics": [] }, "applicability": "marine carbonate in seg-B", "version": 1, "active": true }
+    ],
+    "eventLayers": [
+      { "id": "evt-ash-a", "label": "Ash K correlative", "depth": { "value": 2.7, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "270 cm CCSF-A ash layer", "diagnostics": [] }, "correlationKind": "regionally-correlated-tephra", "correlatedAge": { "samplesUnit": "cal ka BP", "timeDatum": "BP1950", "samples": [12.0,12.05,12.1,11.95,12.0,12.02,12.08,11.98,12.04,12.0], "quantiles": { "q0.05": 11.96, "q0.5": 12.01, "q0.95": 12.09, "q0.99": 12.1 }, "longTail": false }, "evidence": ["tephra glass geochemistry K-7", "splice table r4", "regional event catalog K"], "excluded": false, "exclusionReason": null },
+      { "id": "evt-ash-b", "label": "Possible ash B?", "depth": { "value": 9.6, "unit": "m CCSF-A", "datum": "CCSF-A", "rawRepresentation": "9.60 m muddy ash?", "diagnostics": [] }, "correlationKind": "ambiguous-visual-only", "correlatedAge": null, "evidence": ["visual smear slide only", "no glass chemistry"], "excluded": true, "exclusionReason": "相关证据不足，不能作为年龄事件层。" }
+    ],
+    "exclusions": [
+      { "id": "exc-anc-C02", "subjectId": "anc-C02", "subjectKind": "anchor", "excluded": true, "reason": "碎屑再搬运，年龄可能来自更老源区。", "source": "sedimentology meeting note 2026-09-10", "ruleCode": "exclusion.reworked.macrofossil" },
+      { "id": "exc-evt-ash-b", "subjectId": "evt-ash-b", "subjectKind": "event-layer", "excluded": true, "reason": "仅有肉眼观察，缺少地球化学相关。", "source": "tephra lab ticket T-118", "ruleCode": "exclusion.event.correlation.insufficient" }
+    ],
+    "rawObservations": [
+      { "id": "raw-unknown-depth", "kind": "depth", "location": "materials/rawObservations/raw-unknown-depth", "rawRepresentation": "13.4 ?? below core top", "intendedUnit": "m CCSF-A", "intendedDatum": "CCSF-A", "keepInPlaceReason": "单位符号损坏，不能为画图猜测成米；保留原始片段和位置。", "diagnostics": [{ "code": "format.corrupt", "severity": "error", "location": "materials/rawObservations/raw-unknown-depth", "message": "无法识别单位，不能规范化。", "rawRepresentation": "13.4 ?? below core top" }] }
+    ]
+  },
+  "rules": {
+    "initialParameters": {
+      "id": "param-v1",
+      "version": 1,
+      "method": "within-segment-piecewise-linear-distributional",
+      "monotonicTailProbability": 0.05,
+      "candidateScoreToleranceYears": 0.25,
+      "maxCandidates": 12,
+      "maxDerivationSteps": 200,
+      "rationale": "只在连续段内检查深度向下年龄变旧；不整合和缺口是显式边界。",
+      "active": true
+    },
+    "requiredMachineJudgements": [
+      "monotonic.only.within.continuous.segment",
+      "gap.is.explicit.boundary",
+      "distribution.not.collapsed.to.mean",
+      "equally.optimal.models.retained"
+    ]
+  },
+  "stages": [],
+  "counterfactuals": [],
+  "judgements": []
+}
