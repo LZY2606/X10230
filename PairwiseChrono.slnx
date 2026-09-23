@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ChronoCore/ChronoCore.csproj" />
+    <Project Path="src/ChronoStorage/ChronoStorage.csproj" />
+    <Project Path="src/ChronoWeb/ChronoWeb.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ChronoTests/ChronoTests.csproj" />
+  </Folder>
+</Solution>
