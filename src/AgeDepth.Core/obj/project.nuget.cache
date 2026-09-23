@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "U/BJU1c42tY=",
+  "success": true,
+  "projectFilePath": "/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/AgeDepth.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/mac/.nuget/packages/microsoft.data.sqlite/10.0.0/microsoft.data.sqlite.10.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.data.sqlite.core/10.0.0/microsoft.data.sqlite.core.10.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sourcegear.sqlite3/3.50.4.2/sourcegear.sqlite3.3.50.4.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/3.0.2/sqlitepclraw.bundle_e_sqlite3.3.0.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.config.e_sqlite3/3.0.2/sqlitepclraw.config.e_sqlite3.3.0.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.core/3.0.2/sqlitepclraw.core.3.0.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sqlitepclraw.provider.e_sqlite3/3.0.2/sqlitepclraw.provider.e_sqlite3.3.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
