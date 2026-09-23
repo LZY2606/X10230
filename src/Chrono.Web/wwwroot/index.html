@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KC-21 岩芯深度–年龄模型复核台</title>
+<link rel="stylesheet" href="/app.css"/>
+</head>
+<body>
+<header>
+  <h1>岩芯年代尺复核 · <span id="project-name">…</span></h1>
+  <div class="meta-line">
+    <span id="meta-datum" data-stable-id="meta-vertical-datum"></span>
+    <span id="meta-time" data-stable-id="meta-time-datum"></span>
+    <span id="meta-params" data-stable-id="meta-params-version"></span>
+    <span id="meta-build" data-stable-id="meta-build-status"></span>
+    <span id="meta-frozen" class="frozen" data-stable-id="meta-branch-frozen"></span>
+  </div>
+</header>
+
+<section class="controls" id="controls">
+  <label>分支
+    <select id="branch-select" data-stable-id="control-branch"></select>
+  </label>
+  <label>回到事件
+    <select id="event-select" data-stable-id="control-at-event"></select>
+  </label>
+  <button id="btn-refresh" data-stable-id="btn-refresh">重读</button>
+  <span class="spacer"></span>
+  <button id="btn-freeze" data-stable-id="btn-freeze">冻结当前分支头部模型</button>
+  <button id="btn-export" data-stable-id="btn-export">导出项目包</button>
+  <label class="filebtn">导入项目包
+    <input type="file" id="import-file" accept=".zip,.chrono.zip"/>
+  </label>
+</section>
+
+<section id="summary" data-stable-id="build-summary" class="summary"></section>
+
+<main class="grid">
+  <article class="panel">
+    <h2>岩芯纵剖（分段/缺口/不整合/事件层）</h2>
+    <div id="svg-profile" data-stable-id="svg-profile-host"></div>
+  </article>
+  <article class="panel">
+    <h2>锚点年龄分布（分位数，绝不以均值替代）</h2>
+    <div id="svg-anchors" data-stable-id="svg-anchors-host"></div>
+  </article>
+  <article class="panel wide">
+    <h2>不确定度带与沉积速率区间</h2>
+    <div id="svg-bands" data-stable-id="svg-bands-host"></div>
+  </article>
+
+  <article class="panel">
+    <h2>多候选模型谱系（等优全部保留）</h2>
+    <table id="candidate-table" data-stable-id="table-candidates">
+      <thead><tr><th>稳定身份</th><th>链</th><th>族</th><th>排名</th><th>等优</th>
+      <th>分数</th><th>有效覆盖</th><th>操作</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </article>
+
+  <article class="panel">
+    <h2>机器可读判断</h2>
+    <div id="judgments" data-stable-id="list-judgments"></div>
+  </article>
+
+  <article class="panel wide">
+    <h2>锚点与排除档案（含原始表示）</h2>
+    <table id="anchor-table" data-stable-id="table-anchors">
+      <thead><tr><th>id</th><th>深度(原始)</th><th>分布</th><th>2.5%</th><th>中位</th><th>97.5%</th>
+      <th>储层</th><th>事件</th><th>来源</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </article>
+
+  <article class="panel">
+    <h2>无法转换/失效诊断（留在原位置）</h2>
+    <div id="diagnostics" data-stable-id="list-diagnostics"></div>
+  </article>
+
+  <article class="panel">
+    <h2>参数调整（新版本，不覆盖历史）</h2>
+    <div class="formrow">
+      <label>版本 <input id="param-version" value="params-v3" data-stable-id="input-param-version"/></label>
+      <label>抽样数 <input id="param-samples" type="number" value="3000" data-stable-id="input-param-samples"/></label>
+      <label>速率上限 cm/ka <input id="param-rate" type="number" value="120" data-stable-id="input-param-rate"/></label>
+      <button id="btn-params" data-stable-id="btn-apply-params">记录参数修订并重算</button>
+    </div>
+  </article>
+
+  <article class="panel">
+    <h2>冻结后比较新锚点影响</h2>
+    <div class="formrow">
+      <label>深度(带单位) <input id="probe-depth" placeholder="例如 2.05 m" data-stable-id="input-probe-depth"/></label>
+      <label>中位年龄 cal BP <input id="probe-age" placeholder="例如 6800" data-stable-id="input-probe-age"/></label>
+      <label>σ 年 <input id="probe-sigma" type="number" value="70" data-stable-id="input-probe-sigma"/></label>
+      <label>材料 <input id="probe-material" placeholder="例如 G. bulloides" data-stable-id="input-probe-material"/></label>
+      <button id="btn-probe" data-stable-id="btn-probe">建探测分支并比较</button>
+    </div>
+    <pre id="probe-result" data-stable-id="probe-result"></pre>
+  </article>
+
+  <article class="panel wide">
+    <h2>事件历史（点击回到旧事件，恢复当时依赖版本与结论）</h2>
+    <table id="event-table" data-stable-id="table-events">
+      <thead><tr><th>#</th><th>事件</th><th>标签</th><th>规则版本</th><th>父级</th><th>冻结</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </article>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
