@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/AgeDepthLab/AgeDepthLab.csproj" />
+  <Project Path="tests/AgeDepthLab.Tests/AgeDepthLab.Tests.csproj" />
+</Solution>
