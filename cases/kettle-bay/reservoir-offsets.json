@@ -1,0 +1,9 @@
+[
+  {
+    "id": "reservoir/marine-delta-r-kettle",
+    "coreId": "HKB-2024-C",
+    "name": "local marine reservoir offset Delta R, Kettle Bay",
+    "offset": { "kind": "normal", "datum": "BP1950", "mean": 310, "sigma": 60 },
+    "enabled": true
+  }
+]

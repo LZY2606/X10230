@@ -1,0 +1,8 @@
+[
+  {
+    "id": "datum/kettle-bay",
+    "coreId": "HKB-2024-C",
+    "datum": "cm b.s.f. (sea floor)",
+    "depthDirection": "PositiveDown"
+  }
+]

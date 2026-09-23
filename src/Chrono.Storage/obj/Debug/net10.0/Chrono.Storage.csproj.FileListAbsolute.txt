@@ -1,0 +1,16 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/bin/Debug/net10.0/Chrono.Storage.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/bin/Debug/net10.0/Chrono.Storage.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/bin/Debug/net10.0/Chrono.Storage.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/bin/Debug/net10.0/Chrono.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/bin/Debug/net10.0/Chrono.Core.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.S.BB98625F.Up2Date
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/refint/Chrono.Storage.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/Chrono.Storage.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/Chrono.Storage/obj/Debug/net10.0/ref/Chrono.Storage.dll

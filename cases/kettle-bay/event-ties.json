@@ -1,0 +1,36 @@
+[
+  {
+    "id": "event/tephra-KBT1",
+    "coreId": "HKB-2024-C",
+    "eventCode": "KBT1-rhyolitic-tephra",
+    "atDepth": "265.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "correlatedAge": { "kind": "normal", "datum": "BP1950", "mean": 3050, "sigma": 40 },
+    "correlationBasis": "geochemical glass-shard match to dated KBT1 source eruption",
+    "correlationGroup": "tephra-at-265"
+  },
+  {
+    "id": "event/tephra-KBT1-alt",
+    "coreId": "HKB-2024-C",
+    "eventCode": "KBT1-rhyolitic-tephra (alternative marine isochron attribution)",
+    "atDepth": "265.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "correlatedAge": { "kind": "normal", "datum": "BP1950", "mean": 3050, "sigma": 40 },
+    "correlationBasis": "same shard chemistry, alternative distal source of indistinguishable age; equally defensible",
+    "correlationGroup": "tephra-at-265",
+    "excluded": true,
+    "exclusionReason": "conflicting correlation: unresolved at import, retained as second candidate"
+  },
+  {
+    "id": "event/tephra-KBL2",
+    "coreId": "HKB-2024-C",
+    "eventCode": "KBL2-basaltic-tephra",
+    "atDepth": "600.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "correlatedAge": { "kind": "normal", "datum": "BP1950", "mean": 6750, "sigma": 55 },
+    "correlationBasis": "major-element match to KBL2 dated on land"
+  }
+]

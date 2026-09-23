@@ -1,0 +1,18 @@
+{
+  "caseId": "kettle-bay-2024-C",
+  "title": "Kettle Bay core HKB-2024-C: depth anchors, sedimentation rates and multi-candidate lineage",
+  "coreId": "HKB-2024-C",
+  "version": "2024-initial",
+  "ageDatum": "BP1950 (cal yr before 1950 CE)",
+  "depthDatum": "cm below sea-floor (cm b.s.f.), positive downward",
+  "narrativeStages": [
+    "initial-import-review",
+    "parameter-revision",
+    "local-source-amendment",
+    "conflicting-human-decision"
+  ],
+  "boundaryCombinations": [
+    "duplicate_depth", "unconformity", "inverted_interval", "tied_anchors",
+    "long_tail_distribution", "local_recompute", "concurrent_freeze"
+  ]
+}

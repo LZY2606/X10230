@@ -1,0 +1,32 @@
+[
+  {
+    "id": "seg/01-hemipelagic",
+    "coreId": "HKB-2024-C",
+    "name": "hemipelagic mud, unit I",
+    "topDepth": "0",
+    "bottomDepth": "420",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "structure": "Continuous"
+  },
+  {
+    "id": "seg/02-fault-zone",
+    "coreId": "HKB-2024-C",
+    "name": "slumped fault zone (no monotone age)",
+    "topDepth": "420",
+    "bottomDepth": "455",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "structure": "Faulted"
+  },
+  {
+    "id": "seg/03-diatomite",
+    "coreId": "HKB-2024-C",
+    "name": "laminated diatomite, unit II",
+    "topDepth": "455",
+    "bottomDepth": "780",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "structure": "Continuous"
+  }
+]

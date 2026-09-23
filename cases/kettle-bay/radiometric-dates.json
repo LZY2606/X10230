@@ -1,0 +1,71 @@
+[
+  {
+    "id": "date/HKB-C-014",
+    "coreId": "HKB-2024-C",
+    "labCode": "Beta-482014",
+    "atDepth": "62.5",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "measuredAge": { "kind": "normal", "datum": "BP1950", "mean": 1250, "sigma": 35 },
+    "reservoirOffsetId": "reservoir/marine-delta-r-kettle"
+  },
+  {
+    "id": "date/HKB-C-031",
+    "coreId": "HKB-2024-C",
+    "labCode": "Beta-482031",
+    "atDepth": "188.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "measuredAge": { "kind": "normal", "datum": "BP1950", "mean": 2380, "sigma": 45 },
+    "reservoirOffsetId": "reservoir/marine-delta-r-kettle"
+  },
+  {
+    "id": "date/HKB-C-052",
+    "coreId": "HKB-2024-C",
+    "labCode": "Beta-482052",
+    "atDepth": "330.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "measuredAge": {
+      "kind": "mixture",
+      "datum": "BP1950",
+      "components": [
+        { "weight": 0.9, "distribution": { "kind": "normal", "datum": "BP1950", "mean": 3650, "sigma": 55 } },
+        { "weight": 0.1, "distribution": { "kind": "normal", "datum": "BP1950", "mean": 5200, "sigma": 120 } }
+      ]
+    },
+    "reservoirOffsetId": "reservoir/marine-delta-r-kettle"
+  },
+  {
+    "id": "date/HKB-C-061-reworked",
+    "coreId": "HKB-2024-C",
+    "labCode": "Beta-482061",
+    "atDepth": "210.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "measuredAge": { "kind": "student_t", "datum": "BP1950", "location": 4300, "scale": 90, "df": 4 },
+    "reservoirOffsetId": "reservoir/marine-delta-r-kettle",
+    "excluded": true,
+    "exclusionReason": "reworked shell: age disagrees with stratigraphic order; kept for evidence"
+  },
+  {
+    "id": "date/HKB-C-073",
+    "coreId": "HKB-2024-C",
+    "labCode": "Beta-482073",
+    "atDepth": "510.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "measuredAge": { "kind": "normal", "datum": "BP1950", "mean": 6100, "sigma": 50 },
+    "reservoirOffsetId": "reservoir/marine-delta-r-kettle"
+  },
+  {
+    "id": "date/HKB-C-089",
+    "coreId": "HKB-2024-C",
+    "labCode": "Beta-482089",
+    "atDepth": "705.0",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "measuredAge": { "kind": "normal", "datum": "BP1950", "mean": 7420, "sigma": 60 },
+    "reservoirOffsetId": "reservoir/marine-delta-r-kettle"
+  }
+]

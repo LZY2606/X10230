@@ -1,0 +1,11 @@
+[
+  {
+    "id": "gap/hiatus-780",
+    "coreId": "HKB-2024-C",
+    "gapKind": "Hiatus",
+    "atDepth": "780",
+    "depthUnit": "cm",
+    "depthDatum": "cm b.s.f. (sea floor)",
+    "note": "erosional contact; no interpolation of age across this surface"
+  }
+]

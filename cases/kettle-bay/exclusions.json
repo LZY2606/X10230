@@ -1,0 +1,8 @@
+[
+  {
+    "id": "exclusion/date-HKB-C-061-reworked",
+    "targetMaterialId": "date/HKB-C-061-reworked",
+    "reason": "reworked shell identified by petrography; retained in store, excluded from anchors",
+    "decidedBy": "sed-team@kettle"
+  }
+]
