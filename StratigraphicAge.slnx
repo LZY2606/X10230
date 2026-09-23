@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StratigraphicAge.Core/StratigraphicAge.Core.csproj" />
+    <Project Path="src/StratigraphicAge.Web/StratigraphicAge.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/StratigraphicAge.Tests/StratigraphicAge.Tests.csproj" />
+  </Folder>
+</Solution>
