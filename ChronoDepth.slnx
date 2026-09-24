@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/ChronoDepth/ChronoDepth.csproj" />
+  <Project Path="tests/ChronoDepth.Tests/ChronoDepth.Tests.csproj" />
+</Solution>
