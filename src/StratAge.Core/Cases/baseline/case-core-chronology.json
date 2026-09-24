@@ -1,0 +1,92 @@
+{
+  "schema": "stratage.case/1.0",
+  "caseId": "C-CORE-2026-A",
+  "title": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "narrative": "沉积学小组把 Lake Hakanoa-3 岩芯切分为三个连续层段 S-1/S-2/S-3，层段间由一条取芯缺口(GAP)与一条不整合(UNCONFORMITY)显式分隔；S-3 是经构造倒转的层段。放射性碳(含湖水储层偏移)、两层火山灰事件层与一个长尾 Student-t 锚点共同组成深度-年龄模型。重复深度与无法转换的材料被保留但标记，全部等优候选必须留档。这是针对岩芯年代尺的专门领域案例，不是通用表格。",
+  "coreId": "HKA-3",
+  "depthDatum": "mbsf",
+  "timeBasis": "ka BP",
+  "referenceYear": 1950,
+  "segments": [
+    { "id": "S-1", "name": "Upper mud (continuous)", "topDepthRaw": "0 mbsf", "baseDepthRaw": "11.8 mbsf", "boundaryBelow": "Gap",
+      "note": "连续湖相泥，0-11.8 mbsf；年龄随深度单调变老。" },
+    { "id": "S-2", "name": "Middle silt (across unconformity)", "topDepthRaw": "12.2 mbsf", "baseDepthRaw": "24.0 mbsf", "boundaryBelow": "Unconformity",
+      "note": "12.2-24 mbsf；底界为不整合，年龄可在边界处任意跳变，禁止跨边界插值。" },
+    { "id": "S-3", "name": "Overturned lower unit", "topDepthRaw": "24.3 mbsf", "baseDepthRaw": "35.0 mbsf", "overturned": true,
+      "note": "24.3-35 mbsf 为构造倒转层段：深度越深地层越新，单调方向在层段内反转，边界处重置。" }
+  ],
+  "boundaries": [
+    { "id": "B-GAP", "atDepthRaw": "12.0 mbsf", "kind": "Gap", "name": "Core recovery gap", "note": "11.8-12.2 mbsf 取芯缺口，显式深度缺口边界。" },
+    { "id": "B-UNC", "atDepthRaw": "24.15 mbsf", "kind": "Unconformity", "name": "Mid-Pleistocene unconformity", "note": "不整合面，两侧年龄不连续。" }
+  ],
+  "eventBeds": [
+    { "id": "EB-A", "name": "Hakanoa Tephra Alpha", "ageRaw": "12.4 ka", "ageSigmaRaw": "0.3 ka",
+      "correlationNote": "区域标志火山灰，跨岩芯相关，作为 S-1 事件层锚点。" },
+    { "id": "EB-B", "name": "Hakanoa Tephra Beta", "ageRaw": "41.0 ka", "ageSigmaRaw": "0.9 ka",
+      "correlationNote": "S-2 火山灰事件层。" }
+  ],
+  "reservoirOffsets": [
+    { "id": "RO-LAKE", "raw": "DeltaR = 0.8 +/- 0.2 ka (hardwater)", "deltaRKa": 0.8, "sigmaKa": 0.2,
+      "basis": "ka BP local hardwater reservoir" }
+  ],
+  "anchors": [
+    { "id": "A-01", "segmentId": "S-1", "depthRaw": "2.0 mbsf", "ageRaw": "3.2 ka", "ageSigmaRaw": "0.25 ka",
+      "kind": "Radiocarbon", "sourceRef": "HKA3-logbook#p12", "laboratoryCode": "Beta-90021",
+      "reservoirOffsetId": "RO-LAKE",
+      "note": "表层放射性碳，施加湖水储层偏移。" },
+    { "id": "A-02", "segmentId": "S-1", "depthRaw": "6.0 mbsf", "ageRaw": "12.4 ka", "ageSigmaRaw": "0.3 ka",
+      "kind": "Tephra", "sourceRef": "tephra-corr-2026#Alpha", "eventBedId": "EB-A",
+      "note": "Alpha 火山灰事件层，12.4 +/- 0.3 ka。" },
+    { "id": "A-03", "segmentId": "S-1", "depthRaw": "10.0 mbsf", "ageRaw": "19.0 ka", "ageSigmaRaw": "0.9 ka",
+      "kind": "Radiocarbon", "sourceRef": "HKA3-logbook#p31", "laboratoryCode": "Beta-90044",
+      "reservoirOffsetId": "RO-LAKE",
+      "note": "缺口之上的最老 S-1 锚点。" },
+
+    { "id": "A-04", "segmentId": "S-2", "depthRaw": "14.0 mbsf", "ageRaw": "30.0 ka", "ageSigmaRaw": "1.5 ka",
+      "kind": "Radiocarbon", "sourceRef": "HKA3-logbook#p40", "reservoirOffsetId": "RO-LAKE",
+      "note": "缺口之下首个锚点；与 A-03 年龄差由缺口解释，不做跨缺口插值。" },
+    { "id": "A-05-TA", "segmentId": "S-2", "depthRaw": "18.0 mbsf", "ageRaw": "41.0 ka", "ageSigmaRaw": "0.9 ka",
+      "kind": "Tephra", "sourceRef": "tephra-corr-2026#Beta", "eventBedId": "EB-B", "tieGroup": "TIE-18",
+      "note": "并列候选：将 18 mbsf 处对比到 Beta 火山灰。" },
+    { "id": "A-05-TB", "segmentId": "S-2", "depthRaw": "18.0 mbsf", "ageRaw": "43.0 ka", "ageSigmaRaw": "2.0 ka",
+      "kind": "Bioevent", "sourceRef": "pollen-zone-2026#P7", "tieGroup": "TIE-18",
+      "note": "并列候选：将同一深度对比到花粉带 P7(43 +/- 2 ka)。两者等优，必须都保留。" },
+    { "id": "A-06", "segmentId": "S-2", "depthRaw": "22.0 mbsf", "ageRaw": "55.0 ka",
+      "kind": "UTh", "sourceRef": "uth-series-2026#A06",
+      "distribution": { "type": "studentt", "meanKa": 55.0, "scaleKa": 3.0, "df": 3.0 },
+      "note": "长尾 Student-t 锚点(df=3)：不得用均值替代，尾部必须传播进不确定度带。" },
+
+    { "id": "A-07", "segmentId": "S-3", "depthRaw": "26.0 mbsf", "ageRaw": "120.0 ka", "ageSigmaRaw": "4.0 ka",
+      "kind": "Magnetostrat", "sourceRef": "mag-2026#M2",
+      "note": "倒转层段顶部：层段内最老。" },
+    { "id": "A-08", "segmentId": "S-3", "depthRaw": "30.0 mbsf", "ageRaw": "95.0 ka", "ageSigmaRaw": "3.0 ka",
+      "kind": "UTh", "sourceRef": "uth-series-2026#A08",
+      "note": "倒转层段中部：越深越新，符合 overturn 方向。" },
+    { "id": "A-09", "segmentId": "S-3", "depthRaw": "33.0 mbsf", "ageRaw": "78.0 ka", "ageSigmaRaw": "2.5 ka",
+      "kind": "UTh", "sourceRef": "uth-series-2026#A09",
+      "note": "倒转层段底部：层段内最新。" },
+
+    { "id": "A-DUP", "segmentId": "S-1", "depthRaw": "6.0 mbsf", "ageRaw": "11.0 ka", "ageSigmaRaw": "0.4 ka",
+      "kind": "Radiocarbon", "sourceRef": "HKA3-logbook#p15", "reservoirOffsetId": "RO-LAKE",
+      "note": "与 A-02 完全同深但不是并列组：深度重复，需人工决定，初始不产生唯一模型。" },
+    { "id": "A-BADUNIT", "segmentId": "S-2", "depthRaw": "16.0 mbsf", "ageRaw": "age lost", "ageSigmaRaw": "1 ka",
+      "kind": "Other", "sourceRef": "field-card#p2",
+      "note": "年龄缺少可转换单位/数字：原始表示留在原地并附诊断，绝不为画图丢弃。" }
+  ],
+  "exclusions": [
+    { "id": "X-01", "targetId": "A-OLD-REWORKED", "targetKind": "AgeAnchor",
+      "reason": "再沉积贝壳，被判定为搬运再沉积；材料保留但不参与建模。",
+      "ruleId": "R-EXCLUSION", "keptRaw": "A-OLD-REWORKED @ 8.2 mbsf = 71 ka (reworked shell, Beta-88000)" }
+  ],
+  "parameterRevision": { "fromVersion": "v1-linear", "toVersion": "v2-pchip",
+    "change": "interpolation linear -> pchip",
+    "scopeNote": "参数修订只触发依赖该参数的派生重算，不可变材料不变。" },
+  "localSourcePatch": { "targetAnchorId": "A-06", "field": "scaleKa", "from": "3.0", "to": "2.2",
+    "scopeNote": "只影响 S-2 中依赖 A-06 的局部曲线；S-1/S-3 与事件层不受影响。" },
+  "conflictingDecisions": [
+    { "decisionId": "D-RESERVOIR-ON", "targetId": "A-01", "action": "apply-reservoir", "wins": "true",
+      "note": "一方主张对 A-01 施加硬水储层偏移。" },
+    { "decisionId": "D-RESERVOIR-OFF", "targetId": "A-01", "action": "suppress-reservoir", "wins": "false",
+      "note": "另一方主张湖已开放、无储层；互相冲突的人工决定都保留，被采纳与未采纳结果都留档。" }
+  ]
+}
