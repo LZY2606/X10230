@@ -1,0 +1,13 @@
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/bin/Debug/net10.0/AgeDepth.Core.deps.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/bin/Debug/net10.0/AgeDepth.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/bin/Debug/net10.0/AgeDepth.Core.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.csproj.AssemblyReference.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.AssemblyInfoInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.AssemblyInfo.cs
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.csproj.CoreCompileInputs.cache
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.sourcelink.json
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/refint/AgeDepth.Core.dll
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/AgeDepth.Core.pdb
+/Users/mac/pro/Pair-wiseGSB/pairwise-gsb-20260919-003312/workspace/1201/runs/B/work/src/AgeDepth.Core/obj/Debug/net10.0/ref/AgeDepth.Core.dll
