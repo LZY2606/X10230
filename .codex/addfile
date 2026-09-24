@@ -1,0 +1,13 @@
+#!/bin/zsh
+# usage: addfile <dest-path>  (content on stdin)
+set -e
+dest="$1"; shift
+tmp=$(mktemp)
+cat > "$tmp"
+{
+  echo "*** Begin Patch"
+  echo "*** Add File: $dest"
+  sed 's/^/+/' "$tmp"
+  echo "*** End Patch"
+} | apply_patch
+rm -f "$tmp"
