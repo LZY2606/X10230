@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>岩芯年代尺 · 深度-年龄模型复核</title>
+<style>
+  :root { --ink:#2b2b2b; --muted:#6b6b6b; --accent:#1f6fb2; --warn:#b3741a; --err:#b3402e; --ok:#4a6b4f; --panel:#fff; --bg:#f3f1ec; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: ui-sans-serif, system-ui, "PingFang SC", sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:14px 22px; background:#26313b; color:#eee; }
+  header h1 { margin:0; font-size:18px; }
+  header .sub { font-size:12px; color:#b9c4cd; margin-top:4px; }
+  main { display:grid; grid-template-columns: minmax(640px, 1fr) 420px; gap:14px; padding:14px 22px; align-items:start; }
+  .panel { background:var(--panel); border:1px solid #ddd6c9; border-radius:8px; padding:12px 14px; margin-bottom:14px; }
+  .panel h2 { margin:0 0 8px; font-size:14px; border-bottom:1px solid #eee5d5; padding-bottom:6px; }
+  .figure-wrap { overflow-x:auto; }
+  .figure-wrap img { max-width:none; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:10px; font-size:13px; }
+  button { background:var(--accent); color:#fff; border:0; border-radius:6px; padding:6px 12px; font-size:13px; cursor:pointer; }
+  button.secondary { background:#8a8577; }
+  button.danger { background:var(--err); }
+  button:disabled { opacity:.5; cursor:default; }
+  input, select, textarea { font-size:13px; padding:4px 6px; border:1px solid #c9c2b2; border-radius:5px; background:#fff; }
+  table { border-collapse:collapse; width:100%; font-size:12px; }
+  th, td { text-align:left; padding:4px 6px; border-bottom:1px solid #eee5d5; vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  code, .mono { font-family: ui-monospace, Menlo, monospace; font-size:11.5px; }
+  .tag { display:inline-block; padding:1px 7px; border-radius:9px; font-size:11px; margin:1px 2px; background:#e8eef4; color:#24507a; }
+  .tag.err { background:#f6e3df; color:var(--err); }
+  .tag.warn { background:#f6ecd9; color:var(--warn); }
+  .tag.ok { background:#e3eee4; color:var(--ok); }
+  .event { padding:5px 8px; border-left:3px solid #cfc7b4; margin:4px 0; font-size:12px; cursor:pointer; }
+  .event:hover { background:#f4efe4; }
+  .event.active { border-left-color:var(--accent); background:#eaf1f8; }
+  .event .kind { font-weight:600; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .row { display:flex; gap:6px; margin-bottom:6px; flex-wrap:wrap; align-items:center; }
+  .muted { color:var(--muted); font-size:12px; }
+  #toast { position:fixed; right:18px; bottom:18px; background:#26313b; color:#eee; padding:10px 16px; border-radius:8px; font-size:13px; display:none; max-width:480px; white-space:pre-wrap; }
+  details summary { cursor:pointer; font-size:13px; color:var(--muted); }
+  .scroll { max-height:260px; overflow-y:auto; }
+</style>
+</head>
+<body>
+<header>
+  <h1>岩芯年代尺：深度锚点、沉积速率与多候选模型谱系</h1>
+  <div class="sub" id="hdr">载入中…</div>
+</header>
+<main>
+  <section>
+    <div class="panel">
+      <div class="toolbar">
+        <label>历史事件 <select id="eventSelect"></select></label>
+        <label>分支 <select id="branchSelect"></select></label>
+        <label><input type="checkbox" id="compareChk"> 对比冻结快照</label>
+        <button id="freezeBtn">冻结当前模型</button>
+        <span class="muted" id="figNote"></span>
+      </div>
+      <div class="figure-wrap"><img id="figure" alt="深度-年龄模型图"></div>
+    </div>
+    <div class="panel">
+      <h2>诊断与判定（结构化状态）</h2>
+      <div id="diags" class="scroll"></div>
+    </div>
+    <div class="panel">
+      <h2>锚点与事件层（每个显示值带稳定身份）</h2>
+      <div class="scroll"><table id="anchorTable"></table></div>
+    </div>
+    <div class="panel">
+      <details><summary>不可变材料库（原始表示，内容哈希身份）</summary>
+        <div class="scroll"><table id="materialTable"></table></div>
+      </details>
+    </div>
+  </section>
+  <aside>
+    <div class="panel">
+      <h2>事件时间线（点击回到任意旧事件）</h2>
+      <div id="timeline" class="scroll"></div>
+    </div>
+    <div class="panel">
+      <h2>人工决定（生成新事件，不覆盖历史）</h2>
+      <div class="row">
+        <select id="decKind"><option value="accept">接受 accept</option><option value="reject">否决 reject</option></select>
+        <input id="decTarget" placeholder="目标锚点，如 A6r" style="width:110px">
+        <input id="decBranch" placeholder="分支" value="main" style="width:70px">
+      </div>
+      <div class="row"><input id="decBy" placeholder="决定人" style="width:110px"><input id="decReason" placeholder="理由（机器可读事件）" style="flex:1"></div>
+      <div class="row"><button id="decBtn">提交决定</button></div>
+      <div id="decisions" class="scroll"></div>
+    </div>
+    <div class="panel">
+      <h2>新增年龄锚点（导入 → 局部重算）</h2>
+      <div class="grid2">
+        <input id="anRef" placeholder="引用，如 A13">
+        <select id="anAgeKind"><option value="normal">normal</option><option value="uniform">uniform</option><option value="samples">samples</option></select>
+        <input id="anDepth" placeholder="深度值" type="number" step="any">
+        <input id="anDepthUnit" value="m" placeholder="深度单位">
+        <input id="anDatum" value="mbsf" placeholder="坐标基准">
+        <input id="anAgeUnit" value="ka" placeholder="年龄单位">
+        <input id="anMean" placeholder="mean" type="number" step="any">
+        <input id="anSigma" placeholder="sigma" type="number" step="any">
+        <input id="anMin" placeholder="min(uniform)" type="number" step="any">
+        <input id="anMax" placeholder="max(uniform)" type="number" step="any">
+      </div>
+      <div class="row"><input id="anSamples" placeholder="samples: 逗号分隔样本值" style="flex:1"></div>
+      <div class="row">
+        <input id="anOffset" placeholder="储层偏移值(空=默认)" type="number" step="any" style="width:150px">
+        <input id="anOffsetUnit" value="ka" style="width:60px">
+        <input id="anMaterial" placeholder="材料" style="flex:1">
+      </div>
+      <div class="row"><button id="anchorBtn">导入锚点并重算</button></div>
+    </div>
+    <div class="panel">
+      <h2>工作流：导出 / 删除 / 导入 / 重播案例</h2>
+      <div class="row">
+        <button class="secondary" id="exportBtn">导出档案</button>
+        <button class="danger" id="resetBtn">删除本地数据库</button>
+        <button class="secondary" id="seedBtn">重播案例包</button>
+      </div>
+      <div class="row"><input type="file" id="importFile" accept=".json"><button class="secondary" id="importBtn">导入</button></div>
+      <div class="muted">导出 → 删除本地数据库 → 导入：身份、顺序与来源关系保持不变。</div>
+    </div>
+    <div class="panel">
+      <h2>反例档案（离线案例包独立重放）</h2>
+      <div id="archive" class="scroll"><span class="muted">载入中…</span></div>
+    </div>
+  </aside>
+</main>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

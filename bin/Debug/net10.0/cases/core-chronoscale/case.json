@@ -1,0 +1,41 @@
+{
+  "name": "core-chronoscale",
+  "title": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "version": "1",
+  "narrative": "湖泊沉积岩芯 CORE-A 的深度-年龄建模会话。沉积学小组把岩芯分段、放射性年龄锚点与事件层组成深度年龄模型，并保留多套可辩护候选。初始导入完整呈现：深度基准(mbsf)、分段缺口(S1/S2 之间取芯缺失)、放射性年龄分布(正态与长尾经验分布)、储层偏移(水生壳体默认 0.40 ka)、事件层相关(火山灰 T1、洪水层 FL-2)以及全部排除决定(A10 再沉积污染)。随后脚本安排：一次参数修订(储层偏移 0.40→0.34 ka)、一次只影响局部依赖的源数据改动(A6 复测)、一次互相冲突的人工决定(接受 vs 否决 A6 复测值)。重放经过：深度重复(A2/A2b)、不整合(S2/S3 边界)、倒置层段(A6' 与 A7)、并列锚点(A2/A3)、年龄分布长尾(A4)、局部重算(仅 S2)、并发冻结(同一模型两次冻结)。",
+  "materials": [
+    { "kind": "depth-datum", "payload": { "name": "mbsf", "note": "深度基准：湖底以下米 (meters below lake floor)，岩芯 CORE-A" } },
+    { "kind": "core-segment", "payload": { "segment": "S1", "top": { "value": 0.0, "unit": "m", "datum": "mbsf" }, "bottom": { "value": 2.4, "unit": "m", "datum": "mbsf" }, "topBoundary": "surface", "bottomBoundary": "gap" } },
+    { "kind": "core-segment", "payload": { "segment": "S2", "top": { "value": 2.85, "unit": "m", "datum": "mbsf" }, "bottom": { "value": 5.1, "unit": "m", "datum": "mbsf" }, "topBoundary": "gap", "bottomBoundary": "unconformity" } },
+    { "kind": "core-segment", "payload": { "segment": "S3", "top": { "value": 5.1, "unit": "m", "datum": "mbsf" }, "bottom": { "value": 7.8, "unit": "m", "datum": "mbsf" }, "topBoundary": "unconformity", "bottomBoundary": "gap" } },
+    { "kind": "core-segment", "payload": { "segment": "S4", "top": { "value": 8.2, "unit": "m", "datum": "mbsf" }, "bottom": { "value": 9.5, "unit": "m", "datum": "mbsf" }, "topBoundary": "gap", "bottomBoundary": "core-bottom" } },
+    { "kind": "age-anchor", "payload": { "anchor": "A1", "depth": { "value": 0.3, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 0.9, "sigma": 0.06 }, "reservoirOffset": null, "material": "aquatic shell", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A2", "depth": { "value": 1.2, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 2.3, "sigma": 0.08 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A2b", "depth": { "value": 120.0, "unit": "cm", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 2.3, "sigma": 0.08 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil (duplicate entry from lab sheet)", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A3", "depth": { "value": 1.2, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 2.45, "sigma": 0.1 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "bulk sediment (parallel lab)", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A4", "depth": { "value": 230.0, "unit": "cm", "datum": "mbsf" }, "age": { "kind": "samples", "unit": "ka", "samples": [3.95, 4.02, 4.05, 4.08, 4.1, 4.12, 4.15, 4.2, 4.6, 5.3, 6.5] }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "charcoal fragments (long-tail posterior)", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "event-layer", "payload": { "layer": "E1", "depth": { "value": 1.85, "unit": "m", "datum": "mbsf" }, "correlatesTo": "Tephra T1 eruption", "eventAge": { "kind": "normal", "unit": "ka", "mean": 3.32, "sigma": 0.04 } } },
+    { "kind": "age-anchor", "payload": { "anchor": "A5", "depth": { "value": 3.1, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 4.6, "sigma": 0.12 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A6", "depth": { "value": 4.4, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 5.2, "sigma": 0.1 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A7", "depth": { "value": 4.9, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 5.6, "sigma": 0.1 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "event-layer", "payload": { "layer": "E2", "depth": { "value": 6.4, "unit": "m", "datum": "mbsf" }, "correlatesTo": "Regional flood layer FL-2", "eventAge": { "kind": "normal", "unit": "ka", "mean": 10.6, "sigma": 0.3 } } },
+    { "kind": "age-anchor", "payload": { "anchor": "A8", "depth": { "value": 5.6, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 9.8, "sigma": 0.2 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A9", "depth": { "value": 7.2, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "yr", "mean": 11900.0, "sigma": 250.0 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A10", "depth": { "value": 8.6, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 12.4, "sigma": 0.3 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "redeposited shell debris", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A11", "depth": { "value": 8.6, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 12.45, "sigma": 0.28 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "age-anchor", "payload": { "anchor": "A12", "depth": { "value": 9.1, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 13.1, "sigma": 0.3 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil", "method": "AMS 14C", "supersedes": null } },
+    { "kind": "exclusion", "payload": { "target": "A10", "reason": "再沉积碎屑污染，年龄系统性偏老，不可用于建模；决定本身永久保留", "decidedBy": "reviewer-lin" } }
+  ],
+  "script": [
+    { "op": "import", "note": "初始导入：深度基准、分段缺口、放射性年龄分布、储层偏移、事件层相关与全部排除决定" },
+    { "op": "fit", "note": "基线推导：核对深度重复(A2/A2b)、并列锚点(A2/A3)、长尾分布(A4)、不整合边界(S2/S3)" },
+    { "op": "freeze", "args": { "branch": "main", "by": "reviewer-lin" }, "note": "冻结基线模型，供后续新锚点影响对比" },
+    { "op": "freeze", "args": { "branch": "main", "by": "reviewer-gomez" }, "note": "并发冻结检验：同一模型第二次冻结必须被拒绝" },
+    { "op": "revise-params", "args": { "paramVersion": "params/v2", "defaultReservoirOffsetKa": 0.34, "reason": "区域储层效应再标定：默认储层偏移 0.40 ka 下调至 0.34 ka", "by": "reviewer-lin" }, "note": "参数修订：只影响使用默认储层偏移的锚点(A1)" },
+    { "op": "fit", "note": "参数修订后重算：S1 候选更新，其余层段身份不变" },
+    { "op": "change-source", "args": { "material": { "kind": "age-anchor", "payload": { "anchor": "A6r", "depth": { "value": 4.4, "unit": "m", "datum": "mbsf" }, "age": { "kind": "normal", "unit": "ka", "mean": 5.95, "sigma": 0.05 }, "reservoirOffset": { "value": 0.0, "unit": "ka" }, "material": "plant macrofossil (re-measured)", "method": "AMS 14C replicate", "supersedes": "A6" } } }, "note": "只改动一个直接来源：A6 复测值取代原值，触发倒置层段检验，局部重算仅限 S2" },
+    { "op": "decide", "args": { "decision": "accept", "target": "A6r", "reason": "复测实验条件更严格，接受倒置作为真实信号并保留结构化无解状态", "by": "reviewer-lin", "branch": "main" }, "note": "人工决定 1：接受 A6 复测值" },
+    { "op": "decide", "args": { "decision": "reject", "target": "A6r", "reason": "复测值与上下层位矛盾，怀疑样品受污染，否决后回原测量值", "by": "reviewer-gomez", "branch": "alt-1" }, "note": "人工决定 2（互相冲突）：在 alt-1 分支否决 A6 复测值" },
+    { "op": "fit", "note": "终态：main 分支保留倒置无解状态，alt-1 分支恢复可解；两套结果并存" }
+  ]
+}
