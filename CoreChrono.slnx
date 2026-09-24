@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CoreChrono.Core/CoreChrono.Core.csproj" />
+    <Project Path="src/CoreChrono.Web/CoreChrono.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CoreChrono.Tests/CoreChrono.Tests.csproj" />
+  </Folder>
+</Solution>
