@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AgeModel.Core/AgeModel.Core.csproj" />
+    <Project Path="src/AgeModel.Web/AgeModel.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AgeModel.Tests/AgeModel.Tests.csproj" />
+  </Folder>
+</Solution>
