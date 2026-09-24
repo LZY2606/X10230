@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/AgeModel/AgeModel.csproj" />
+  <Project Path="tests/AgeModel.Tests/AgeModel.Tests.csproj" />
+</Solution>

@@ -1,0 +1,41 @@
+{
+  "caseId": "core-age-scale-kx01",
+  "title": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "narrative": "沉积学小组将湖泊岩芯 KX-01 的分段、14C 年龄锚点与事件层组成深度-年龄模型，保留多套可辩护候选。初始导入形成基线；随后一次参数修订、一次只影响局部依赖的源数据改动、一次互相冲突的人工决定。",
+  "depthDatum": "m below lake floor (mblf)",
+  "ageDatum": "ka BP (calibrated, 1950)",
+  "materials": [
+    { "kind": "depth-datum", "id": "dd-top", "version": 1, "coreId": "KX-01", "depthM": 0.0, "datumType": "top", "unit": "m", "datum": "mblf", "raw": "0.00 m blf (driller log p.1)" },
+    { "kind": "depth-datum", "id": "dd-sec1", "version": 1, "coreId": "KX-01", "depthM": 4.0, "datumType": "section-boundary", "unit": "m", "datum": "mblf", "raw": "section 1/2 break @ 4.0 m" },
+    { "kind": "segment-gap", "id": "gap-unc-01", "version": 1, "coreId": "KX-01", "fromDepthM": 4.0, "toDepthM": 4.3, "gapKind": "unconformity", "reason": "侵蚀不整合面，沉积间断", "unit": "m", "datum": "mblf", "raw": "erosional unconformity 4.0-4.3 m (core photo #14)" },
+    { "kind": "segment-gap", "id": "gap-loss-01", "version": 1, "coreId": "KX-01", "fromDepthM": 7.0, "toDepthM": 7.2, "gapKind": "gap", "reason": "岩芯采取率不足，段缺失", "unit": "m", "datum": "mblf", "raw": "core loss 7.0-7.2 m" },
+    { "kind": "reservoir-offset", "id": "ro-01", "version": 1, "coreId": "KX-01", "offsetYears": 420, "appliesTo": "14C", "unit": "yr", "datum": "BP1950", "raw": "lake reservoir effect 420 yr (mollusk pair)" },
+    { "kind": "radio-age", "id": "ra-01", "version": 1, "coreId": "KX-01", "depthM": 0.5, "method": "14C", "samplesKa": [1.05,1.10,1.15,1.18,1.20,1.22,1.25,1.28,1.30,1.33,1.36], "unit": "ka BP", "datum": "cal BP1950", "raw": "1120-1360 cal BP (lab UBA-4401)" },
+    { "kind": "radio-age", "id": "ra-02", "version": 1, "coreId": "KX-01", "depthM": 1.5, "method": "14C", "reservoirOffsetId": "ro-01", "samplesKa": [2.95,3.00,3.05,3.10,3.15,3.20,3.25,3.30,3.35,3.40,3.45], "unit": "ka BP", "datum": "cal BP1950", "raw": "3370-3870 cal BP uncorrected (UBA-4402)" },
+    { "kind": "radio-age", "id": "ra-03", "version": 1, "coreId": "KX-01", "depthM": 2.5, "method": "14C", "samplesKa": [3.80,3.90,4.00,4.02,4.05,4.10,4.15,4.30,4.60,5.20,6.10], "unit": "ka BP", "datum": "cal BP1950", "raw": "long-tail calibration, multimodal (UBA-4403)" },
+    { "kind": "radio-age", "id": "ra-04a", "version": 1, "coreId": "KX-01", "depthM": 3.5, "method": "14C", "samplesKa": [4.90,4.95,5.00,5.05,5.10,5.15,5.20,5.25,5.30,5.35,5.40], "unit": "ka BP", "datum": "cal BP1950", "raw": "lab A result 5.15±0.25 ka (UBA-4404)" },
+    { "kind": "radio-age", "id": "ra-04b", "version": 1, "coreId": "KX-01", "depthM": 3.5, "method": "14C", "samplesKa": [5.10,5.15,5.20,5.25,5.30,5.35,5.40,5.45,5.50,5.55,5.60], "unit": "ka BP", "datum": "cal BP1950", "raw": "lab B replicate 5.35±0.25 ka (Beta-8812)" },
+    { "kind": "radio-age", "id": "ra-05", "version": 1, "coreId": "KX-01", "depthM": 5.0, "method": "14C", "samplesKa": [9.20,9.30,9.40,9.45,9.50,9.55,9.60,9.65,9.70,9.80,9.90], "unit": "ka BP", "datum": "cal BP1950", "raw": "9.55±0.35 ka (UBA-4405)" },
+    { "kind": "radio-age", "id": "ra-06", "version": 1, "coreId": "KX-01", "depthM": 6.0, "method": "14C", "samplesKa": [8.60,8.70,8.75,8.80,8.85,8.90,8.95,9.00,9.05,9.10,9.20], "unit": "ka BP", "datum": "cal BP1950", "raw": "8.90±0.30 ka, possible reworking (UBA-4406)" },
+    { "kind": "radio-age", "id": "ra-07a", "version": 1, "coreId": "KX-01", "depthM": 8.0, "method": "14C", "samplesKa": [11.90,12.00,12.05,12.10,12.15,12.20,12.25,12.30,12.35,12.40,12.50], "unit": "ka BP", "datum": "cal BP1950", "raw": "12.2±0.3 ka (UBA-4407)" },
+    { "kind": "radio-age", "id": "ra-07b", "version": 1, "coreId": "KX-01", "depthM": 8.0, "method": "OSL", "samplesKa": [12.10,12.20,12.30,12.35,12.40,12.45,12.50,12.60,12.70,12.80,12.90], "unit": "ka BP", "datum": "OSL years", "raw": "OSL replicate at same depth 12.5±0.4 ka (Lum-221)" },
+    { "kind": "radio-age", "id": "ra-08", "version": 1, "coreId": "KX-01", "depthM": 9.0, "method": "14C", "samplesKa": [14.90,15.00,15.05,15.10,15.15,15.20,15.25,15.30,15.35,15.40,15.50], "unit": "ka BP", "datum": "cal BP1950", "raw": "15.2±0.3 ka (UBA-4408)" },
+    { "kind": "event-layer", "id": "ev-tephra-a", "version": 1, "coreId": "KX-01", "depthM": 2.0, "eventName": "Tephra-A", "ageKa": 3.6, "correlation": "regional tephra T-A (geochem match)", "unit": "m", "datum": "mblf", "raw": "tephra horizon @2.0 m, glass shard geochem" },
+    { "kind": "event-layer", "id": "ev-flood-01", "version": 1, "coreId": "KX-01", "depthM": 6.5, "eventName": "FloodLayer-F1", "ageKa": null, "correlation": "coarse silt couplet, regional flood", "unit": "m", "datum": "mblf", "raw": "flood couplet @6.5 m" },
+    { "kind": "exclusion", "id": "excl-ra00", "version": 1, "targetId": "ra-00", "reason": "ra-00 为表层污染样，全体审阅者一致排除", "decidedBy": "reviewer-lin", "raw": "surface contamination, excluded at intake" }
+  ],
+  "extraMaterials": {
+    "ra03-v2": { "kind": "radio-age", "id": "ra-03", "version": 2, "coreId": "KX-01", "depthM": 2.5, "method": "14C", "samplesKa": [3.85,3.92,4.00,4.05,4.08,4.12,4.18,4.25,4.40,4.70,5.05], "unit": "ka BP", "datum": "cal BP1950", "raw": "re-run with IntCal20, tail shortened (UBA-4403R)" },
+    "ra-new": { "kind": "radio-age", "id": "ra-new-01", "version": 1, "coreId": "KX-01", "depthM": 1.0, "method": "14C", "samplesKa": [2.00,2.05,2.10,2.15,2.20,2.25,2.30,2.35,2.40,2.45,2.50], "unit": "ka BP", "datum": "cal BP1950", "raw": "new anchor 2.25±0.25 ka (UBA-4501)" }
+  },
+  "ops": [
+    { "op": "import", "note": "初始导入：基线完整呈现（深度基准/缺口/分布/储层偏移/事件层/排除决定）" },
+    { "op": "freeze", "modelId": "model:KX-01:seg0:cand0", "by": "reviewer-lin", "note": "冻结首选候选" },
+    { "op": "freeze", "modelId": "model:KX-01:seg0:cand0", "by": "reviewer-wu", "expect": "conflict", "note": "并发冻结：第二个必须冲突" },
+    { "op": "param", "tolerance": 0.08, "maxCandidates": 8, "budget": 10000, "by": "reviewer-lin", "note": "参数修订：单调容差放宽" },
+    { "op": "material", "ref": "ra03-v2", "note": "局部源数据改动：ra-03 重测，仅依赖它的模型重算" },
+    { "op": "decide", "target": "ra-06", "accept": true, "reason": "保留 ra-06 作为再沉积警示标记", "by": "reviewer-lin", "note": "人工决定 A" },
+    { "op": "decide", "target": "ra-06", "accept": false, "reason": "再沉积嫌疑过大，排除出拟合", "by": "reviewer-wu", "note": "人工决定 B（与 A 冲突，两者均保留）" },
+    { "op": "propose", "ref": "ra-new", "note": "新锚点影响：与已冻结模型比较" }
+  ]
+}
