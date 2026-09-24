@@ -1,0 +1,14 @@
+# 第二分支案例：并列锚点 + 段内年龄倒置（语义无解必须是独立结果）
+CASE id=ONG-2018-02 version=1
+DATUM id=DAT-SWI2 name="ONG-2018-02 SWI" axis=cm direction=down depth="0 cm"
+SEGMENT id=SEG-A seq=0 top="0 cm" bottom="200 cm" lith="silt"
+SEGMENT id=SEG-B seq=1 top="200 cm" bottom="400 cm" lith="clay"
+BOUNDARY id=BND-UNCONF1 kind=unconformity at="200 cm" missing="0 cm"
+# 同一深度两个年龄：分布不交 => 并列且冲突，系统保留每个选择为合法候选
+ANCHOR id=ANC-T1 at="60 cm" age="300 cal yr BP" sigma="20 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-T1 dist=gauss
+ANCHOR id=ANC-T2 at="60.05 cm" age="610 cal yr BP" sigma="25 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-T2 dist=gauss
+ANCHOR id=ANC-OK at="150 cm" age="900 cal yr BP" sigma="40 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-OK dist=gauss
+# 不整合“之下”允许变年轻：320 cm 的锚点年轻于 260 cm，因被 BND-UNCONF1 隔断而合法
+ANCHOR id=ANC-LOW1 at="260 cm" age="3200 cal yr BP" sigma="60 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-L1 dist=gauss
+ANCHOR id=ANC-LOW2 at="320 cm" age="2100 cal yr BP" sigma="60 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-L2 dist=gauss
+EVENT id=EVT-X corr=ISO-X at="150 cm" kind=tephra thick="2 cm" age="905 cal yr BP" basis="regional isochron"

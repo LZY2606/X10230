@@ -1,0 +1,6 @@
+# 第二分支反例：同一连续段内年龄倒置 => 该候选语义无解（跨缺口才允许）
+CASE id=ONG-2018-02 version=1-inversion
+DATUM id=DAT-SWI2 name="ONG-2018-02 SWI" axis=cm direction=down depth="0 cm"
+SEGMENT id=SEG-A seq=0 top="0 cm" bottom="200 cm" lith="silt"
+ANCHOR id=ANC-U1 at="60 cm" age="900 cal yr BP" sigma="20 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-U1 dist=gauss
+ANCHOR id=ANC-U2 at="120 cm" age="540 cal yr BP" sigma="20 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=M-U2 dist=gauss

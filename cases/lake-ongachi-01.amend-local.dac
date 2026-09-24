@@ -1,0 +1,31 @@
+# 岩芯年代尺离线案例包 —— 大汤川湖芯 ONG-2018-01
+# 领域专用材料（深度锚点 / 沉积速率 / 多候选模型谱系），非通用表格
+# 深度坐标基准：cm below sediment-water interface，向下加深
+# 年龄基准：cal yr BP（放射性碳年龄已给出报告分布；reservoir= 为储层偏移原值，保留不折算）
+CASE id=ONG-2018-01 version=2-local
+DATUM id=DAT-SWI name="sediment-water-interface ONG-2018-01" axis=cm direction=down depth="0 cm"
+
+# 连续取芯分段（seq 为岩芯物理顺序），其中 118.4 cm 处有一段取芯缺口
+SEGMENT id=SEG-A seq=0 top="0 cm" bottom="118.4 cm" lith="organic silt"
+SEGMENT id=SEG-B seq=1 top="120.0 cm" bottom="246.0 cm" lith="laminated clay"
+SEGMENT id=SEG-C seq=2 top="246.0 cm" bottom="355.0 cm" lith="silty clay with tephra"
+SEGMENT id=SEG-D seq=3 top="355.0 cm" bottom="520.0 cm" lith="massive clay"
+
+# 显式边界：取芯缺口与不整合是真实边界，年龄跨边界不要求单调
+BOUNDARY id=BND-GAP1 kind=gap at="118.4 cm" missing="1.6 cm"
+BOUNDARY id=BND-UNCONF1 kind=unconformity at="246.0 cm" missing="0 cm"
+
+# 放射性年龄锚点：原始表示保留，reservoir 为湖水碳储层偏移（cal yr BP 尺度）
+ANCHOR id=ANC-01 label="plant macrofossil" at="42.0 cm" age="180 cal yr BP" sigma="28 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=MAM-01 dist=gauss
+ANCHOR id=ANC-02 label="bulk sediment" at="96.5 cm" age="520 cal yr BP" sigma="70 cal yr BP" reservoir="120 cal yr BP" method=AMS-14C material=MAM-02 dist=gauss
+ANCHOR id=ANC-03 label="terrestrial twig" at="151.2 cm" age="1180 cal yr BP" sigmaYoung="120 cal yr BP" sigmaOld="260 cal yr BP" reservoir="0 cal yr BP" method=AMS-14C material=MAM-03 dist=asym
+ANCHOR id=ANC-04 label="tephra glass (known age)" at="300.0 cm" age="2710 cal yr BP" sigmaYoung="20 cal yr BP" sigmaOld="20 cal yr BP" reservoir="0 cal yr BP" method=tephrochronology material=MAM-04 dist=asym
+ANCHOR id=ANC-05 label="bulk sediment (reworked)" at="355.0 cm" age="2640 cal yr BP" sigma="60 cal yr BP" reservoir="120 cal yr BP" method=AMS-14C material=MAM-05 dist=gauss
+ANCHOR id=ANC-06 label="wood fragment (long tail)" at="430.0 cm" age="4020 cal yr BP" dist=empirical reservoir="0 cal yr BP" method=AMS-14C material=MAM-06 q=p0.025=3150 q=p0.5=4020 q=p0.95=5600 q=p0.975=7800 cal yr BP
+
+# 事件层：火山灰对比与已知喷发年龄（事件层相关用于候选佐证，不替代锚点分布）
+EVENT id=EVT-TO-A corr=To-a-AD1739 at="300.0 cm" kind=tephra thick="3 cm" age="2710 cal yr BP" basis="regional isochron"
+EVENT id=EVT-TURB1 corr=TURB-LOCAL-1 at="150.0 cm" kind=turbidite thick="6 cm"
+
+# 排除决定：全部保留原因；被排除材料仍是证据，不参与单调约束
+EXCLUDE id=EXC-01 target=ANC-05 reason=REWORKED note="MAM-05 为再搬运碎屑，年龄老于层位预期；人工保留为反例证据，不并入模型"

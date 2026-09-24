@@ -1,0 +1,21 @@
+{
+  "package": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "domain": "lake-core chronostratigraphy (depth-age models, reservoir offsets, event correlation)",
+  "primary": "lake-ongachi-01.baseline.dac",
+  "materials": [
+    { "file": "lake-ongachi-01.baseline.dac", "role": "initial-baseline",
+      "preserves": ["depth-datum", "segment-gap", "radiometric-distributions", "reservoir-offset", "event-correlation", "all-exclusion-decisions"] },
+    { "file": "lake-ongachi-01.amend-local.dac", "role": "parameter/source revision affecting only local dependency",
+      "singleDirectSourceChange": "ANC-03 depth 150.0 cm -> 151.2 cm" },
+    { "file": "lake-ongachi-01.dup-depth.dac", "role": "counterexample depth-duplicate" },
+    { "file": "lake-ongachi-01.inverted-seg.dac", "role": "counterexample inverted-segment" },
+    { "file": "lake-ongachi-02.tied-dip.dac", "role": "branch-2 tied anchors + unconformity across which rejuvenation is legal" },
+    { "file": "lake-ongachi-02.inversion.dac", "role": "branch-2 within-section age inversion (semantic unsolvable)" }
+  ],
+  "replayMustCover": ["depth-duplicate","unconformity","inverted-segment","tied-anchors","long-tail-distribution","local-recompute","concurrent-freeze"],
+  "invariants": [
+    "年龄只能在不断层段内单调；深度缺口与不整合是显式边界",
+    "一个锚点的分布不能被均值替代",
+    "多个等优模型必须全部保留"
+  ]
+}

@@ -34,3 +34,14 @@ coverage/
 .vite/
 .turbo/
 *.tsbuildinfo
+
+# --- .NET ---
+bin/
+obj/
+*.user
+*.suo
+*.db-shm
+*.db-wal
+chrono.db
+chrono.db-*
+artifacts/
