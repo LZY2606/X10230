@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Chrono.Server.csproj" />
+  <Project Path="tests/Chrono.Tests.csproj" />
+</Solution>
