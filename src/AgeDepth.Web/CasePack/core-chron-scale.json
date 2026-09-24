@@ -1,0 +1,48 @@
+{
+  "id": "core-chron-scale-kc07",
+  "title": "岩芯年代尺：深度锚点、沉积速率与多候选模型谱系",
+  "core": "KC-07",
+  "narrative": "沉积学小组将岩芯 KC-07 的分段、放射性年龄锚点与事件层组成深度-年龄模型；保留多套可辩护候选。基线包含深度基准、分段缺口、放射性年龄分布、储层偏移、事件层相关与全部排除决定；随后是一次参数修订、一次局部源数据改动与一次互相冲突的人工决定。",
+  "steps": [
+    { "op": "import", "kind": "datum", "material": { "Id": "datum-mbsf", "Name": "mbsf", "Basis": "meters below seafloor; core-top = 0.00 m; WGS84 irrelevant (relative datum)" } },
+
+    { "op": "import", "kind": "section", "material": { "Id": "S1", "CoreId": "KC-07", "TopM": 0.00, "BottomM": 4.20, "DatumId": "datum-mbsf" } },
+    { "op": "import", "kind": "section", "material": { "Id": "S2", "CoreId": "KC-07", "TopM": 4.55, "BottomM": 9.80, "DatumId": "datum-mbsf" } },
+    { "op": "import", "kind": "section", "material": { "Id": "S3", "CoreId": "KC-07", "TopM": 9.80, "BottomM": 14.00, "DatumId": "datum-mbsf" } },
+    { "op": "import", "kind": "boundary", "material": { "Id": "GAP-1", "DepthM": 4.375, "DatumId": "datum-mbsf", "Kind": "core-loss-gap", "Note": "4.20–4.55 m 岩芯缺失；显式边界，不跨段插值" } },
+    { "op": "import", "kind": "boundary", "material": { "Id": "U-1", "DepthM": 11.30, "DatumId": "datum-mbsf", "Kind": "unconformity", "Note": "侵蚀不整合；上下段年龄不必连续" } },
+
+    { "op": "import", "kind": "offset", "material": { "Id": "R-1", "Raw": "ΔR = 400 ± 40 yr（局地海洋储库校正）", "MeanYr": 400.0, "SigmaYr": 40.0, "AppliesTo": "shell" } },
+
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-01", "DepthM": 0.45, "DatumId": "datum-mbsf", "RawAge": "320 ± 40 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-02", "DepthM": 1.85, "DatumId": "datum-mbsf", "RawAge": "1150 ± 45 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-03", "DepthM": 3.60, "DatumId": "datum-mbsf", "RawAge": "2210 ± 50 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": "R-1", "MaterialClass": "shell" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-04", "DepthM": 6.20, "DatumId": "datum-mbsf", "RawAge": "3350 ± 55 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": "R-1", "MaterialClass": "shell" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-05", "DepthM": 6.20, "DatumId": "datum-mbsf", "RawAge": "3980 ± 60 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-06", "DepthM": 8.90, "DatumId": "datum-mbsf", "RawAge": "q: p5=4400 p25=4520 p50=4700 p75=5100 p95=6800 tail=long-tail-old cal yr BP", "RawUnit": "cal yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "tephra-shard" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-07", "DepthM": 10.50, "DatumId": "datum-mbsf", "RawAge": "6200 ± 80 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": "R-1", "MaterialClass": "shell" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-07b", "DepthM": 11.05, "DatumId": "datum-mbsf", "RawAge": "6550 ± 75 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-08", "DepthM": 12.10, "DatumId": "datum-mbsf", "RawAge": "9400 ± 90 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-09", "DepthM": 13.40, "DatumId": "datum-mbsf", "RawAge": "8800 ± 85 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "shell-reworked" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-10", "DepthM": 13.75, "DatumId": "datum-mbsf", "RawAge": "10300 ± 110 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+    { "op": "import", "kind": "anchor", "material": { "Id": "A-11", "DepthM": 13.95, "DatumId": "datum-mbsf", "RawAge": "no radiometric age — field note 'old, pre-Holocene'", "RawUnit": "qualitative", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "shell" } },
+
+    { "op": "import", "kind": "eventlayer", "material": { "Id": "T-3", "DepthM": 7.40, "DatumId": "datum-mbsf", "Name": "T-3 tephra", "CorrelatedEvent": "eruption E-4.3ka (regional isopach)", "RawAge": "4300 ± 90 cal yr BP", "Dist": { "P5": 4152.0, "P25": 4239.3, "P50": 4300.0, "P75": 4360.7, "P95": 4448.1, "TailKind": "symmetric", "Mean": 4300.0 } } },
+
+    { "op": "exclusion", "record": { "Id": "EX-1", "TargetId": "A-09", "Reason": "再沉积壳体（倒置层段 12.10–13.75 m 中偏年轻）；排除以恢复单调", "DecidedBy": "reviewer-chen", "Adopted": true } },
+    { "op": "exclusion", "record": { "Id": "EX-2", "TargetId": "A-05", "Reason": "提议排除 A-05（与 A-04 并列锚点冲突）；复核后否决——两个并列锚点都保留为多候选", "DecidedBy": "reviewer-chen", "Adopted": false } },
+
+    { "op": "params", "version": "params/v2", "toleranceYr": 60.0, "note": "参数修订：单调容差 25→60 yr，以容纳 14C 平台期" },
+
+    { "op": "import", "kind": "anchor", "revises": "A-02", "material": { "Id": "A-02", "DepthM": 1.85, "DatumId": "datum-mbsf", "RawAge": "1180 ± 40 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } },
+
+    { "op": "decision", "targetId": "seg:KC-07:4.550-9.800#c1", "action": "accept", "rationale": "reviewer-chen：倾向经 A-04（壳体、储库校正后）的分支", "decidedBy": "reviewer-chen" },
+    { "op": "decision", "targetId": "seg:KC-07:4.550-9.800#c1", "action": "reject", "rationale": "reviewer-ito：壳体储库校正不确定，反对采纳 c1；两人决定冲突，均保留", "decidedBy": "reviewer-ito" },
+    { "op": "decision", "targetId": "seg:KC-07:4.550-9.800#c2", "action": "accept", "rationale": "联席复核：采纳经 A-05（陆源木质）的 c2，c1 保留为未采纳候选", "decidedBy": "panel" },
+
+    { "op": "freeze", "by": "reviewer-chen" },
+    { "op": "freeze-stale", "by": "reviewer-ito" },
+
+    { "op": "anchor-impact", "material": { "Id": "A-12", "DepthM": 5.30, "DatumId": "datum-mbsf", "RawAge": "2650 ± 45 14C yr BP", "RawUnit": "14C yr BP", "Dist": null, "ReservoirOffsetId": null, "MaterialClass": "wood" } }
+  ]
+}
