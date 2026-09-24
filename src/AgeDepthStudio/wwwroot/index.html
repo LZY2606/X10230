@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>岩芯深度-年龄模型审阅 · AgeDepthStudio</title>
+<style>
+  :root { --bd:#cdd8e2; --mut:#5c7186; --bg:#f6f8fa; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:var(--bg); color:#183; }
+  body { color:#1b2733; }
+  header { background:#0f3b5f; color:#fff; padding:10px 18px; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:16px; margin:0; font-weight:600; }
+  main { display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:14px; padding:14px; }
+  .card { background:#fff; border:1px solid var(--bd); border-radius:8px; padding:12px; margin-bottom:12px; }
+  .card h2 { font-size:13px; margin:0 0 8px; color:#0f3b5f; }
+  button { border:1px solid #7d95ad; background:#eef4f9; border-radius:5px; padding:5px 10px; cursor:pointer; font-size:12px; }
+  button:hover { background:#dce9f4; }
+  button.primary { background:#0f6b3c; color:#fff; border-color:#0a5; }
+  button.danger { background:#8a2b2b; color:#fff; border-color:#722; }
+  input,select { font-size:12px; padding:4px 6px; border:1px solid #9fb2c3; border-radius:4px; }
+  .ws-tabs button { margin-right:6px; }
+  .ws-tabs button.active { background:#0f3b5f; color:#fff; }
+  table { border-collapse:collapse; width:100%; font-size:11.5px; }
+  th,td { border-bottom:1px solid #e3e9ef; text-align:left; padding:3px 6px; vertical-align:top; }
+  .muted { color:var(--mut); font-size:11.5px; }
+  .pill { display:inline-block; border-radius:10px; padding:1px 8px; font-size:11px; margin-right:4px; }
+  .ok{background:#dff3e4} .warn{background:#f8ecc9} .bad{background:#f6dada} .info{background:#e3ecf7}
+  #figureWrap svg { width:100%; height:auto; border:1px solid #e3e9ef; border-radius:6px; background:#fff; }
+  .timeline { max-height:300px; overflow:auto; }
+  .timeline .ev { padding:3px 6px; border-left:3px solid #9fb2c3; margin-bottom:3px; font-size:11.5px; cursor:pointer; }
+  .timeline .ev:hover { background:#eef4f9; }
+  .ev.judgment { border-color:#c07a00; }
+  .ev.freeze { border-color:#0f6b3c; }
+  .ev.trial { border-color:#6a3ea0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  label { font-size:11.5px; display:block; margin:4px 0 2px; color:var(--mut); }
+  #toast { position:fixed; bottom:18px; right:18px; max-width:420px; }
+  #toast div { background:#102b40; color:#fff; padding:8px 12px; border-radius:6px; margin-top:6px; font-size:12px; }
+  .diag { font-size:11px; color:#7a2f2f; }
+</style>
+</head>
+<body>
+<header>
+  <h1>岩芯深度-年龄模型审阅台</h1>
+  <div class="ws-tabs" id="wsTabs"></div>
+  <span id="chainBadge" class="pill info">链校验 …</span>
+  <span id="freezeBadge" class="pill ok">未冻结</span>
+</header>
+<main>
+  <section>
+    <div class="card">
+      <h2>证据纵剖（岩芯 · 锚点分布 · 速率区间 · 不确定度带）</h2>
+      <div id="figureWrap" class="muted">加载中…</div>
+      <div class="muted" id="metaLine"></div>
+    </div>
+    <div class="card">
+      <h2>复核操作：冻结后比较新锚点影响</h2>
+      <div class="grid2">
+        <div>
+          <label>冻结令牌（默认当前参数版本；可故意填旧值制造并发冲突）</label>
+          <input id="freezeToken" style="width:120px"/>
+          <button class="primary" onclick="doFreeze()">冻结当前模型</button>
+        </div>
+        <div>
+          <label>新锚点试验（非破坏；冻结状态也允许）</label>
+          <span class="muted">段</span> <input id="tSeg" style="width:90px"/>
+          <span class="muted">深度(带单位原文)</span> <input id="tDepth" style="width:90px"/>
+          <span class="muted">μ</span> <input id="tMu" style="width:60px"/>
+          <span class="muted">σ</span> <input id="tSig" style="width:50px"/>
+          <button onclick="doTrial(false)">比较影响</button>
+          <button onclick="doTrial(true)">比较并采纳</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>材料与决定分层（不可变材料 / 可修改决定；排除决定全部保留）</h2>
+      <div class="grid2">
+        <div id="materialsBox"></div>
+        <div id="decisionsBox"></div>
+      </div>
+    </div>
+  </section>
+  <aside>
+    <div class="card">
+      <h2>时间旅行（回到任意旧事件即恢复当时依赖版本与结论）</h2>
+      <div class="timeline" id="timeline"></div>
+      <div style="margin-top:6px">
+        <button onclick="jump(-1)">回到最新</button>
+        <button onclick="recompute()">重算模型</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>多候选模型谱系（等优候选全部保留）</h2>
+      <div id="candBox" class="timeline"></div>
+    </div>
+    <div class="card">
+      <h2>反例试验档案（采纳/未采纳结果都保留）</h2>
+      <div id="trialBox" class="timeline"></div>
+    </div>
+    <div class="card">
+      <h2>导出 / 删除本地数据库 / 导入（身份、顺序、来源关系往返）</h2>
+      <button onclick="doExport()">导出归档</button>
+      <button class="danger" onclick="doDeleteDb()">删除本地数据库</button>
+      <input type="file" id="importFile" accept="application/json"/>
+      <button onclick="doImport()">导入归档</button>
+      <div class="muted" style="margin-top:6px">所有领域量带单位/基准；无法转换的值保留原位并附诊断，不为绘图丢弃。</div>
+    </div>
+  </aside>
+</main>
+<div id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
