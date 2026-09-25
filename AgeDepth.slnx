@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/AgeDepth.Core/AgeDepth.Core.csproj" />
+  <Project Path="src/AgeDepth.Server/AgeDepth.Server.csproj" />
+  <Project Path="tests/AgeDepth.Tests/AgeDepth.Tests.csproj" />
+</Solution>
