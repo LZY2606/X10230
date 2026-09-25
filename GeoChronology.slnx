@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GeoChronology.Core/GeoChronology.Core.csproj" />
+    <Project Path="src/GeoChronology.Storage/GeoChronology.Storage.csproj" />
+    <Project Path="src/GeoChronology.Web/GeoChronology.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GeoChronology.Tests/GeoChronology.Tests.csproj" />
+  </Folder>
+</Solution>
