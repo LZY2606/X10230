@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CoreChronology.Tests/CoreChronology.Tests.csproj" />
+  <Project Path="CoreChronology.Web/CoreChronology.Web.csproj" />
+</Solution>
